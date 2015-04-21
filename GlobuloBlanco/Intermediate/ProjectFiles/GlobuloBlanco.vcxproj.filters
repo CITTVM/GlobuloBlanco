@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\GlobuloBlanco.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{90DDFA26-16C8-4A1E-A59B-5B483843ACB9}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\GlobuloBlanco.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\GlobuloBlancoEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{1C3D5EEC-E9EA-417E-A1E0-1F6048123802}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\GlobuloBlanco">
+			<UniqueIdentifier>{7092B673-AAB3-4FC6-B055-5FF1DED013FD}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\GlobuloBlanco\GlobuloBlanco.Build.cs">
+			<Filter>Source\GlobuloBlanco</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\GlobuloBlanco\GlobuloBlanco.cpp">
+			<Filter>Source\GlobuloBlanco</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\GlobuloBlanco\GlobuloBlanco.h">
+			<Filter>Source\GlobuloBlanco</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\GlobuloBlanco\GlobuloBlancoGameMode.cpp">
+			<Filter>Source\GlobuloBlanco</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\GlobuloBlanco\GlobuloBlancoGameMode.h">
+			<Filter>Source\GlobuloBlanco</Filter>
+		</ClInclude >
+		<Filter Include="Source\GlobuloBlanco\Resources">
+			<UniqueIdentifier>{E0DA7F26-13FB-4B57-838A-6A349BAE4F92}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Source\GlobuloBlanco\Resources\Windows">
+			<UniqueIdentifier>{B7895768-591B-4545-B0AD-96705D6002FB}</UniqueIdentifier>
+		</Filter>
+		<ResourceCompile Include="..\..\Source\GlobuloBlanco\Resources\Windows\GlobuloBlanco.rc">
+			<Filter>Source\GlobuloBlanco\Resources\Windows</Filter>
+		</ResourceCompile >
+	</ItemGroup>
+</Project>
