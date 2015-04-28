@@ -6,7 +6,7 @@ public class GlobuloBlanco : ModuleRules
 {
 	public GlobuloBlanco(TargetInfo Target)
 	{
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

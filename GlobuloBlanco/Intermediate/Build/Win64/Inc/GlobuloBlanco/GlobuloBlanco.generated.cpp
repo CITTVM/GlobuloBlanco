@@ -12,12 +12,31 @@ void EmptyLinkFunctionForGeneratedCodeGlobuloBlanco() {}
 	{
 	}
 	IMPLEMENT_CLASS(AGlobuloBlancoGameMode, 1122240559);
+	void ANano::StaticRegisterNativesANano()
+	{
+	}
+	IMPLEMENT_CLASS(ANano, 1757306813);
+	void ANanoController::StaticRegisterNativesANanoController()
+	{
+		FNativeFunctionRegistrar::RegisterFunction(ANanoController::StaticClass(),"GetViewRotation",(Native)&ANanoController::execGetViewRotation);
+		FNativeFunctionRegistrar::RegisterFunction(ANanoController::StaticClass(),"SetViewRotation",(Native)&ANanoController::execSetViewRotation);
+	}
+	IMPLEMENT_CLASS(ANanoController, 1914089906);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
 	ENGINE_API class UClass* Z_Construct_UClass_AGameMode();
+	ENGINE_API class UClass* Z_Construct_UClass_ACharacter();
+	COREUOBJECT_API class UScriptStruct* Z_Construct_UScriptStruct_UObject_FRotator();
+	ENGINE_API class UClass* Z_Construct_UClass_APlayerController();
 
 	GLOBULOBLANCO_API class UClass* Z_Construct_UClass_AGlobuloBlancoGameMode_NoRegister();
 	GLOBULOBLANCO_API class UClass* Z_Construct_UClass_AGlobuloBlancoGameMode();
+	GLOBULOBLANCO_API class UClass* Z_Construct_UClass_ANano_NoRegister();
+	GLOBULOBLANCO_API class UClass* Z_Construct_UClass_ANano();
+	GLOBULOBLANCO_API class UFunction* Z_Construct_UFunction_ANanoController_GetViewRotation();
+	GLOBULOBLANCO_API class UFunction* Z_Construct_UFunction_ANanoController_SetViewRotation();
+	GLOBULOBLANCO_API class UClass* Z_Construct_UClass_ANanoController_NoRegister();
+	GLOBULOBLANCO_API class UClass* Z_Construct_UClass_ANanoController();
 	GLOBULOBLANCO_API class UPackage* Z_Construct_UPackage_GlobuloBlanco();
 	UClass* Z_Construct_UClass_AGlobuloBlancoGameMode_NoRegister()
 	{
@@ -52,6 +71,122 @@ void EmptyLinkFunctionForGeneratedCodeGlobuloBlanco() {}
 		return OuterClass;
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AGlobuloBlancoGameMode(Z_Construct_UClass_AGlobuloBlancoGameMode, TEXT("AGlobuloBlancoGameMode"));
+	UClass* Z_Construct_UClass_ANano_NoRegister()
+	{
+		return ANano::StaticClass();
+	}
+	UClass* Z_Construct_UClass_ANano()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_ACharacter();
+			Z_Construct_UPackage_GlobuloBlanco();
+			OuterClass = ANano::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20900080;
+
+
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Navigation Pawn|Character|InternalEvents"));
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("Nano.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("Nano.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_ANano(Z_Construct_UClass_ANano, TEXT("ANano"));
+	UFunction* Z_Construct_UFunction_ANanoController_GetViewRotation()
+	{
+		struct NanoController_eventGetViewRotation_Parms
+		{
+			FRotator ReturnValue;
+		};
+		UClass* OuterClass=Z_Construct_UClass_ANanoController();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("GetViewRotation"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x54840401, 65535, sizeof(NanoController_eventGetViewRotation_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(ReturnValue, NanoController_eventGetViewRotation_Parms), 0x0000000000000580, Z_Construct_UScriptStruct_UObject_FRotator());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Pawn"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("NanoController.h"));
+			MetaData->SetValue(NewProp_ReturnValue, TEXT("ModuleRelativePath"), TEXT("NanoController.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_ANanoController_SetViewRotation()
+	{
+		struct NanoController_eventSetViewRotation_Parms
+		{
+			FRotator NewRotation;
+		};
+		UClass* OuterClass=Z_Construct_UClass_ANanoController();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("SetViewRotation"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x04C40401, 65535, sizeof(NanoController_eventSetViewRotation_Parms));
+			UProperty* NewProp_NewRotation = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("NewRotation"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(NewRotation, NanoController_eventSetViewRotation_Parms), 0x0000000008000182, Z_Construct_UScriptStruct_UObject_FRotator());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Pawn"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("NanoController.h"));
+			MetaData->SetValue(NewProp_NewRotation, TEXT("ModuleRelativePath"), TEXT("NanoController.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UClass* Z_Construct_UClass_ANanoController_NoRegister()
+	{
+		return ANanoController::StaticClass();
+	}
+	UClass* Z_Construct_UClass_ANanoController()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_APlayerController();
+			Z_Construct_UPackage_GlobuloBlanco();
+			OuterClass = ANanoController::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20900284;
+
+				OuterClass->LinkChild(Z_Construct_UFunction_ANanoController_GetViewRotation());
+				OuterClass->LinkChild(Z_Construct_UFunction_ANanoController_SetViewRotation());
+
+				UProperty* NewProp_ViewRotation = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("ViewRotation"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(ViewRotation, ANanoController), 0x0000080000000000, Z_Construct_UScriptStruct_UObject_FRotator());
+				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_ANanoController_GetViewRotation()); // 3841187719
+				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_ANanoController_SetViewRotation()); // 2487053575
+				OuterClass->ClassConfigName = FName(TEXT("Game"));
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Collision Rendering Utilities|Transformation"));
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("NanoController.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("NanoController.h"));
+				MetaData->SetValue(NewProp_ViewRotation, TEXT("ModuleRelativePath"), TEXT("NanoController.h"));
+				MetaData->SetValue(NewProp_ViewRotation, TEXT("ToolTip"), TEXT("La direcci?n de la vista y el movimiento ahora est?n separados.\nAhora el controlador de rotaci?n determinar? para donde se mover?\nViewRotation representa a donde estamos viendo."));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_ANanoController(Z_Construct_UClass_ANanoController, TEXT("ANanoController"));
 	UPackage* Z_Construct_UPackage_GlobuloBlanco()
 	{
 		static UPackage* ReturnPackage = NULL;
@@ -60,8 +195,8 @@ void EmptyLinkFunctionForGeneratedCodeGlobuloBlanco() {}
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/GlobuloBlanco")), false, false));
 			ReturnPackage->PackageFlags |= PKG_CompiledIn | 0x00000000;
 			FGuid Guid;
-			Guid.A = 0x17D4AAA8;
-			Guid.B = 0x0E891A5C;
+			Guid.A = 0x91103351;
+			Guid.B = 0x6338940E;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

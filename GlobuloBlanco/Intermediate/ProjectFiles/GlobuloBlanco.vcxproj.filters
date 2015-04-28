@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\GlobuloBlanco.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{90DDFA26-16C8-4A1E-A59B-5B483843ACB9}</UniqueIdentifier>
+			<UniqueIdentifier>{28A7D0CF-2D73-4A4A-AD52-7F804A9B400F}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\GlobuloBlanco.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{1C3D5EEC-E9EA-417E-A1E0-1F6048123802}</UniqueIdentifier>
+			<UniqueIdentifier>{F90119D1-474E-4D2F-BBFA-4158C7F72E99}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -22,7 +22,7 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Source\GlobuloBlanco">
-			<UniqueIdentifier>{7092B673-AAB3-4FC6-B055-5FF1DED013FD}</UniqueIdentifier>
+			<UniqueIdentifier>{4DA88962-F853-4E5D-AB9C-32E5CA865927}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\GlobuloBlanco\GlobuloBlanco.Build.cs">
 			<Filter>Source\GlobuloBlanco</Filter>
@@ -39,11 +39,17 @@
 		<ClInclude Include="..\..\Source\GlobuloBlanco\GlobuloBlancoGameMode.h">
 			<Filter>Source\GlobuloBlanco</Filter>
 		</ClInclude >
+		<ClCompile Include="..\..\Source\GlobuloBlanco\NanoController.cpp">
+			<Filter>Source\GlobuloBlanco</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\GlobuloBlanco\NanoController.h">
+			<Filter>Source\GlobuloBlanco</Filter>
+		</ClInclude >
 		<Filter Include="Source\GlobuloBlanco\Resources">
-			<UniqueIdentifier>{E0DA7F26-13FB-4B57-838A-6A349BAE4F92}</UniqueIdentifier>
+			<UniqueIdentifier>{389EAE61-594C-49C6-B807-B3ED3888FB21}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Source\GlobuloBlanco\Resources\Windows">
-			<UniqueIdentifier>{B7895768-591B-4545-B0AD-96705D6002FB}</UniqueIdentifier>
+			<UniqueIdentifier>{62245600-508A-4689-9D9B-8807C731D377}</UniqueIdentifier>
 		</Filter>
 		<ResourceCompile Include="..\..\Source\GlobuloBlanco\Resources\Windows\GlobuloBlanco.rc">
 			<Filter>Source\GlobuloBlanco\Resources\Windows</Filter>
