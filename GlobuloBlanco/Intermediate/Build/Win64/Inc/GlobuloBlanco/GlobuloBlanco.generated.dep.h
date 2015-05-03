@@ -8,9 +8,3 @@
 #ifndef GLOBULOBLANCO_GlobuloBlancoGameMode_generated_h
 	#include "GlobuloBlancoGameMode.h"
 #endif
-#ifndef GLOBULOBLANCO_Nano_generated_h
-	#include "Nano.h"
-#endif
-#ifndef GLOBULOBLANCO_NanoController_generated_h
-	#include "NanoController.h"
-#endif
