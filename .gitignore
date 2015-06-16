@@ -26,6 +26,7 @@
 *.exe
 *.out
 *.app
+*.ipa
 
 # File Types known to be unecessary
 *.swp
@@ -43,12 +44,21 @@
 *.sdf
 *.sln
 *.suo
+*.opensdf
+*.xcodeproj
+
+# Precompiled Assets
+SourceArt/**/*.png
+SourceArt/**/*.tga
 
 # UE4 stuff
-/Binaries
-/DerivedDataCache
-/Intermediate
-/Saved
+Binaries/*
+DerivedDataCache/*
+Intermediate/*
+Saved/*
+Build/*
+
+!Build/*.ico
 
 # Misc
 *.swp
