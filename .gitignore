@@ -52,11 +52,11 @@ SourceArt/**/*.png
 SourceArt/**/*.tga
 
 # UE4 stuff
-Binaries/*
-DerivedDataCache/*
-Intermediate/*
-Saved/*
-Build/*
+GlobuloBlanco/Binaries/*
+GlobuloBlanco/DerivedDataCache/*
+GlobuloBlanco/Intermediate/*
+GlobuloBlanco/Saved/*
+GlobuloBlanco/Build/*
 
 !Build/*.ico
 
